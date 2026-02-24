@@ -1,21 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #38bdf8;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background: #334155;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e293b;
+            margin-top: 20px;
+        }
+
+        button {
+            background: #38bdf8;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
 <body>
 
-<img src="img_la.jpg" alt="LA" style="width:100%">
+<header>
+    <h1>Moje Portfolio</h1>
+    <nav>
+        <a href="#about">O mně</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
 
-<div class="">
- <h1>This is a Heading</h1>
- <p>This is a paragraph.</p>
- <p>This is another paragraph.</p>
-</div>
+<section id="about">
+    <h2>O mně</h2>
+    <div class="card">
+        <p>Ahoj! Jmenuji se [Tvoje jméno]. Jsem student a zajímám se o HTML, CSS a tvorbu webů.</p>
+        <p>Umím vytvářet jednoduché webové stránky a chci se zlepšovat v programování.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Moje projekty</h2>
+
+    <div class="card">
+        <h3>Projekt 1</h3>
+        <p>Popis tvého projektu.</p>
+        <button onclick="alert('Otevřít projekt')">Zobrazit</button>
+    </div>
+
+    <div class="card">
+        <h3>Projekt 2</h3>
+        <p>Popis tvého projektu.</p>
+        <button onclick="alert('Otevřít projekt')">Zobrazit</button>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <div class="card">
+        <p>Email: tvuj@email.cz</p>
+        <p>Discord: tvoje_jmeno</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Moje Portfolio</p>
+</footer>
 
 </body>
 </html>
