@@ -1,242 +1,128 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moje Portfolio</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#020617;
-position:sticky;
-top:0;
-}
-
-nav h1{
-color:#38bdf8;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:20px;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-/* HERO */
-
-.hero{
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-flex-direction:column;
-}
-
-.hero h2{
-font-size:50px;
-}
-
-.hero span{
-color:#38bdf8;
-}
-
-.hero p{
-margin-top:15px;
-color:#cbd5f5;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 25px;
-border:none;
-background:#38bdf8;
-color:black;
-font-weight:bold;
-cursor:pointer;
-border-radius:6px;
-}
-
-/* ABOUT */
-
-.about{
-padding:80px 10%;
-text-align:center;
-}
-
-.about h2{
-margin-bottom:20px;
-}
-
-/* PROJECTS */
-
-.projects{
-padding:80px 10%;
-}
-
-.projects h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-.project-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#38bdf8;
-}
-
-/* CONTACT */
-
-.contact{
-padding:80px 10%;
-text-align:center;
-}
-
-.contact input,
-.contact textarea{
-width:100%;
-max-width:400px;
-margin:10px;
-padding:10px;
-border:none;
-border-radius:6px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#020617;
-margin-top:40px;
-}
-
-</style>
+    <body id="top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procházka.sro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
 </head>
-
 <body>
 
 <nav>
-<h1>MojePortfolio</h1>
+    <div class="logo">Procházka.sro</div>
+    <ul>
+        <li><a href="#top">Domů</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>  
 
-<ul>
-<li><a href="#about">O mně</a></li>
-<li><a href="#projects">Projekty</a></li>
-<li><a href="#contact">Kontakt</a></li>
-</ul>
+    </ul>
 </nav>
 
-
 <section class="hero">
+    <div class="hero-text">
+        <h1>Martin Procházka</h1>
+        <h2>WEB DESIGN DEVELOPER</h2>
+        <p>Udělal jsem aspoň 3 weby a designy (WOW🤩🤩) fakt nekecám</p>
+        <a href="#kontakt" class="btn">Napiš mi</a>
+    </div>
 
-<h2>Ahoj, jsem <span>Programátor</span></h2>
+    <div class="hero-image">
+        <img src="image-removebg-preview (1).png" alt="borec" class="borec-image">
+    </div>
+</section>
 
-<p>Vytvářím webové stránky a aplikace</p>
+<section id="portfolio" class="portfolio">
 
-<button class="btn">Moje projekty</button>
+    <div class="portfolio-header">
+        <h2>Design</h2>
+        <p>Ukázky mých projektů v oblasti designu (klikni pro fullscreen)</p>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="polygon fenek1.png" alt="fenek" onclick="openLightbox(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="pejot.png" alt="peugot" onclick="openLightbox(this.src)">
+        </div>
+        <div class="portfolio-item">
+            <img src="Instagram story VR (1).png" alt="VR" onclick="openLightbox(this.src)">
+        </div>
+    </div>
+
+    <div class="portfolio-header web-header">
+        <h2>Web</h2>
+        <p>Ukázky mých projektů v oblasti webů (pouze odkazy)</p>
+    </div>
+
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <a href="https://martinprochazka.endora.site/WEB%20kapela/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="voidweb2.png" alt="voidweb">
+            </a>
+        </div>
+
+        <div class="portfolio-item">
+            <a href="https://martinprochazka.endora.site/WEB%20AI/index.html" target="_blank" rel="noopener noreferrer">
+                <img src="webAI2.png" alt="webAI">
+            </a>
+        </div>
+
+        <div class="portfolio-item">
+            <a href="https://martinprochazka.endora.site/" target="_blank" rel="noopener noreferrer">
+                <img src="balatro2.png" alt="balatro">
+            </a>
+        </div>
+    </div>
 
 </section>
 
-
-<section class="about" id="about">
-
-<h2>O mně</h2>
-
-<p>
-Jsem začínající web developer. Programuji v HTML, CSS a JavaScriptu
-a rád tvořím moderní webové stránky.
-</p>
-
+<section id="kontakt" class="kontakt">
+    <h2>Kontakt</h2>
+    <p>Email: martin.prochazka@educanet.cz</p>
+    <p>Telefon: +420 123 456 789</p>
 </section>
 
-
-<section class="projects" id="projects">
-
-<h2>Moje projekty</h2>
-
-<div class="project-grid">
-
-<div class="card">
-<h3>Projekt 1</h3>
-<p>Popis projektu.</p>
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
 </div>
 
-<div class="card">
-<h3>Projekt 2</h3>
-<p>Popis projektu.</p>
-</div>
+<script>
+function openLightbox(src) {
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lightbox-img");
+    
+    lb.style.display = "flex";
+    lbImg.src = src;
 
-<div class="card">
-<h3>Projekt 3</h3>
-<p>Popis projektu.</p>
-</div>
+    // Aktivuje Fullscreen mód prohlížeče
+    if (lb.requestFullscreen) {
+        lb.requestFullscreen();
+    } else if (lb.webkitRequestFullscreen) { // Safari
+        lb.webkitRequestFullscreen();
+    }
+}
 
-</div>
+function closeLightbox() {
+    const lb = document.getElementById("lightbox");
+    lb.style.display = "none";
 
-</section>
+    // Vypne Fullscreen mód při zavření
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
+}
 
-
-<section class="contact" id="contact">
-
-<h2>Kontakt</h2>
-
-<input type="text" placeholder="Jméno">
-<br>
-
-<input type="email" placeholder="Email">
-<br>
-
-<textarea placeholder="Zpráva"></textarea>
-<br>
-
-<button class="btn">Odeslat</button>
-
-</section>
-
-<footer>
-
-<p>© 2026 Moje Portfolio</p>
-
-</footer>
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+});
+</script>
 
 </body>
 </html>
