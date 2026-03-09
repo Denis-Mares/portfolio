@@ -1,128 +1,249 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <body id="top">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maress.stranka</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="design.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mareš Portfolio</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+nav h1{
+color:#ff2d63;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff2d63;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 10%;
+min-height:90vh;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero h3{
+color:#ff2d63;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#cbd5f5;
+margin-bottom:25px;
+}
+
+.btn{
+padding:12px 25px;
+border:none;
+background:#ff2d63;
+color:white;
+font-weight:bold;
+cursor:pointer;
+border-radius:6px;
+}
+
+.hero img{
+width:300px;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 10%;
+text-align:center;
+}
+
+/* PROJECTS */
+
+.projects{
+padding:80px 10%;
+}
+
+.projects h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 10%;
+text-align:center;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin:10px 0;
+color:#cbd5f5;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+color:#94a3b8;
+}
+
+</style>
 </head>
+
 <body>
 
 <nav>
-    <div class="logo">Procházka.sro</div>
-    <ul>
-        <li><a href="#top">Domů</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>  
 
-    </ul>
+<h1>Procházka.sro</h1>
+
+<ul>
+<li><a href="#">Domů</a></li>
+<li><a href="#projects">Portfolio</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+
 </nav>
 
+
 <section class="hero">
-    <div class="hero-text">
-        <h1>Martin Procházka</h1>
-        <h2>WEB DESIGN DEVELOPER</h2>
-        <p>Udělal jsem aspoň 3 weby a designy (WOW🤩🤩) fakt nekecám</p>
-        <a href="#kontakt" class="btn">Napiš mi</a>
-    </div>
 
-    <div class="hero-image">
-        <img src="image-removebg-preview (1).png" alt="borec" class="borec-image">
-    </div>
-</section>
+<div class="hero-text">
 
-<section id="portfolio" class="portfolio">
+<h2>Martin Procházka</h2>
 
-    <div class="portfolio-header">
-        <h2>Design</h2>
-        <p>Ukázky mých projektů v oblasti designu (klikni pro fullscreen)</p>
-    </div>
+<h3>WEB DESIGN DEVELOPER</h3>
 
-    <div class="portfolio-grid">
-        <div class="portfolio-item">
-            <img src="polygon fenek1.png" alt="fenek" onclick="openLightbox(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="pejot.png" alt="peugot" onclick="openLightbox(this.src)">
-        </div>
-        <div class="portfolio-item">
-            <img src="Instagram story VR (1).png" alt="VR" onclick="openLightbox(this.src)">
-        </div>
-    </div>
+<p>
+Udělal jsem aspoň 3 weby a designy (WOW 🤩😍) fakt nekecám
+</p>
 
-    <div class="portfolio-header web-header">
-        <h2>Web</h2>
-        <p>Ukázky mých projektů v oblasti webů (pouze odkazy)</p>
-    </div>
+<a href="#contact">
+<button class="btn">Napiš mi</button>
+</a>
 
-    <div class="portfolio-grid">
-        <div class="portfolio-item">
-            <a href="https://martinprochazka.endora.site/WEB%20kapela/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="voidweb2.png" alt="voidweb">
-            </a>
-        </div>
-
-        <div class="portfolio-item">
-            <a href="https://martinprochazka.endora.site/WEB%20AI/index.html" target="_blank" rel="noopener noreferrer">
-                <img src="webAI2.png" alt="webAI">
-            </a>
-        </div>
-
-        <div class="portfolio-item">
-            <a href="https://martinprochazka.endora.site/" target="_blank" rel="noopener noreferrer">
-                <img src="balatro2.png" alt="balatro">
-            </a>
-        </div>
-    </div>
-
-</section>
-
-<section id="kontakt" class="kontakt">
-    <h2>Kontakt</h2>
-    <p>Email: martin.prochazka@educanet.cz</p>
-    <p>Telefon: +420 123 456 789</p>
-</section>
-
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="">
 </div>
 
-<script>
-function openLightbox(src) {
-    const lb = document.getElementById("lightbox");
-    const lbImg = document.getElementById("lightbox-img");
-    
-    lb.style.display = "flex";
-    lbImg.src = src;
+<img src="moje-fotka.png">
 
-    // Aktivuje Fullscreen mód prohlížeče
-    if (lb.requestFullscreen) {
-        lb.requestFullscreen();
-    } else if (lb.webkitRequestFullscreen) { // Safari
-        lb.webkitRequestFullscreen();
-    }
-}
+</section>
 
-function closeLightbox() {
-    const lb = document.getElementById("lightbox");
-    lb.style.display = "none";
 
-    // Vypne Fullscreen mód při zavření
-    if (document.fullscreenElement) {
-        document.exitFullscreen();
-    }
-}
+<section class="projects" id="projects">
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeLightbox();
-    }
-});
-</script>
+<h2>Moje projekty</h2>
 
+<div class="project-grid">
+
+<div class="card">
+<h3>Portfolio</h3>
+<p>Moje osobní portfolio stránka.</p>
+</div>
+
+<div class="card">
+<h3>Design webu</h3>
+<p>Design vytvořený v HTML a CSS.</p>
+</div>
+
+<div class="card">
+<h3>JavaScript projekt</h3>
+<p>Malá aplikace v JavaScriptu.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2>Kontakt</h2>
+
+<p>📧 Email: martinprochazka@email.com</p>
+
+<p>📱 Telefon: +420 777 123 456</p>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Mareš Portfolio</p>
+
+</footer>
+
+</body>
+</html>
 </body>
 </html>
