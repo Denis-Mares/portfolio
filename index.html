@@ -219,23 +219,31 @@ Joo udělal jsem nějaký web takže nejsem nejhorší 😎
 <img id="lightbox-img">
 </div>
 
-  <script>
+<script id="r8yq2s">
+function openLightbox(src) {
+  const lightbox = document.createElement('div');
+  lightbox.style.position = 'fixed';
+  lightbox.style.top = 0;
+  lightbox.style.left = 0;
+  lightbox.style.width = '100%';
+  lightbox.style.height = '100%';
+  lightbox.style.background = 'rgba(0,0,0,0.8)';
+  lightbox.style.display = 'flex';
+  lightbox.style.justifyContent = 'center';
+  lightbox.style.alignItems = 'center';
+  lightbox.style.cursor = 'pointer';
+  lightbox.onclick = () => document.body.removeChild(lightbox);
 
-const images = document.querySelectorAll(".gallery-img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+  // Obrázek
+  const img = document.createElement('img');
+  img.src = src;
+  img.style.maxWidth = '90%';
+  img.style.maxHeight = '90%';
+  img.style.borderRadius = '10px';
 
-images.forEach(img => {
-img.onclick = () => {
-lightbox.style.display = "flex";
-lightboxImg.src = img.src;
+  lightbox.appendChild(img);
+  document.body.appendChild(lightbox);
 }
-});
-
-lightbox.onclick = () => {
-lightbox.style.display = "none";
-}
-
 </script>
   
 </body>
