@@ -218,7 +218,30 @@ Joo udělal jsem nějaký web takže nejsem nejhorší 😎
 <p>📱 Telefon: +420 674 123 975</p>
 
 </section>
+  
+<div id="lightbox">
+<img id="lightbox-img">
+</div>
 
+  <script>
+
+const images = document.querySelectorAll(".gallery-img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+images.forEach(img => {
+img.onclick = () => {
+lightbox.style.display = "flex";
+lightboxImg.src = img.src;
+}
+});
+
+lightbox.onclick = () => {
+lightbox.style.display = "none";
+}
+
+</script>
+  
 </body>
 </html>
 
