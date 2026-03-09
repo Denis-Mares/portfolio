@@ -1,30 +1,170 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mareš Portfolio</title>
+.
+<style>
 
-<link rel="stylesheet" href="style.css">
+html{
+scroll-behavior:smooth;
+}
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+nav h1{
+  color: white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff2d63;
+}
+
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 10%;
+min-height:90vh;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero h3{
+color: #ffffff;;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#cbd5f5;
+margin-bottom:25px;
+}
+
+
+
+.hero img{
+width:300px;
+}
+
+.about{
+padding:80px 10%;
+text-align:center;
+}
+
+
+.projects{
+padding:80px 10%;
+}
+
+.projects h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+
+.contact{
+padding:80px 10%;
+text-align:center;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin:10px 0;
+color:#cbd5f5;
+}
+
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+color:#94a3b8;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
+<nav>
+
 <h1>Mareš.portfolio</h1>
 
-<nav>
-<a href="#">Domů</a>
-<a href="#projects">Portfolio</a>
-<a href="#contact">Kontakt</a>
+<ul>
+<li><a href="#">Domů</a></li>
+<li><a href="#projects">Portfolio</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+
 </nav>
-</header>
 
 
-<section>
+<section class="hero">
+
+<div class="hero-text">
 
 <h2>Denis Mareš</h2>
 
@@ -34,27 +174,34 @@
 Joo udělal jsem nějaký web takže nejsem nejhorší 😎
 </p>
 
+
+
+</div>
+
+<img src="JAAAAA.png">
+
 </section>
 
 
-<section id="projects">
+<section class="projects" id="projects">
 
 <h2>Moje projekty</h2>
-
-<h3 class="gallery-title">Má díla</h3>
 
 <div class="project-grid">
 
 <div class="card">
-<img src="design1.png" class="gallery-img">
+<h3>Portfolio</h3>
+<p>Moje osobní portfolio stránka.</p>
 </div>
 
 <div class="card">
-<img src="design2.png" class="gallery-img">
+<h3>Design webu</h3>
+<p>Design vytvořený v HTML a CSS.</p>
 </div>
 
 <div class="card">
-<img src="design3.png" class="gallery-img">
+<h3>JavaScript projekt</h3>
+<p>Malá aplikace v JavaScriptu.</p>
 </div>
 
 </div>
@@ -62,46 +209,18 @@ Joo udělal jsem nějaký web takže nejsem nejhorší 😎
 </section>
 
 
-<section id="contact">
+<section class="contact" id="contact">
 
 <h2>Kontakt</h2>
 
-<p>📧 Email: denis.mares@educanet.cz</p>
+<p>📧 Email: denis.mares@educanet.com</p>
 
 <p>📱 Telefon: +420 674 123 975</p>
 
 </section>
 
-
-<footer>
-© 2025 Denis Mareš
-</footer>
-
-
-<div id="lightbox">
-<img id="lightbox-img">
-</div>
-
-
-<script>
-
-const images = document.querySelectorAll(".gallery-img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-images.forEach(img => {
-img.onclick = () => {
-lightbox.style.display = "flex";
-lightboxImg.src = img.src;
-}
-});
-
-lightbox.onclick = () => {
-lightbox.style.display = "none";
-}
-
-</script>
-
+</body>
+</html>
 
 </body>
 </html>
